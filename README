@@ -1,0 +1,28 @@
+The library 'gamesys' allows calculating series of numbers. It consists of one module named 'Gamesys'.
+
+In order to build the library you will need the Haskell environment platform installed on your machine:
+- GHC in version above 7.8.1
+- Cabal build tool in verison above 1.18 
+
+The library exports three functions:
+- series that returns series when x,y and length of series is specified
+- specialNumbers - returns special numbers based on specified x, y, z and length of series parameters
+- specialNumbersFromSet - returns special numbers based on specified series and parameter z
+
+---------------------------------------------------------------------------------------------------------
+Build and install instruction:
+
+To build the library you need to invoke 'cabal build' command on 'gamesys' directory.
+It will create an object file: dist/build/Gamesys.o
+
+In order to install the library use: 'cabal install' command.
+
+---------------------------------------------------------------------------------------------------------
+Testing:
+
+The project makes use of HSpec library for tetsting exported functions. Before running tests you need
+to enable this functionality with: 'cabal install --enable-tests' command (invoke it once). 
+To run test cases use: 'cabal test'. Feel free to add your own test cases (it may require modifying 
+gamesys.cabal file if you add dependencies to other libraries or you create another file with test cases).
+
+
